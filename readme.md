@@ -113,4 +113,46 @@ const examplePerson: Person = {
 console.log(examplePerson);
 ```
 
+### 4. `task4.ts`
+
+This file explores union and intersection types using interfaces.
+
+**Code Example**:
+
+```typescript
+interface Book {
+  title: string;
+  author: string;
+  pages: number;
+  genre: string;
+}
+
+interface Magazine {
+  title: string;
+  issueNumber: number;
+  publisher: string;
+}
+
+type BookOrMagazine = Book | Magazine;
+type BookAndMagazine = Book & Magazine;
+
+const exampleUnion: BookOrMagazine = {
+  title: "Tech Monthly",
+  issueNumber: 42,
+  publisher: "Tech Publishers",
+};
+
+const exampleIntersection: BookAndMagazine = {
+  title: "Science Digest",
+  author: "Jane Doe",
+  pages: 120,
+  genre: "Science",
+  issueNumber: 15,
+  publisher: "Science Publishers",
+};
+
+console.log(exampleUnion);
+console.log(exampleIntersection);
+```
+
 This is a partial [README.md](http://_vscodecontentref_/1) file with detailed documentation for the first few tasks. Let me know if you'd like the rest of the tasks to be included in the same format!
